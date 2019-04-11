@@ -52,10 +52,16 @@
     </head>
     <body>
      <div id="main">
-       <div id="header">This is The question!</div>
+       <div id="header"><h1> This The question!</h1></div>
        <div id="rightSB"></div>
        <div id="leftSB"></div>
-       <div id="content">{{question}}</div>
+       <div id="content">
+         <h1>{{ question.question_text }}</h1>
+        <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }}</li>
+        {% endfor %}
+        </ul></div>
         </div>
     </body>
     </html>
