@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Question by ID</title>
+    <title>Vote</title>
 <style>
     #main{
      display:grid;
@@ -54,28 +54,11 @@
     </head>
     <body>
      <div id="main">
-       <div id="header"><h1> This is The question!</h1></div>
+       <div id="header"><strong><h1> Your vote!</h1></strong></div>
        <div id="rightSB"></div>
        <div id="leftSB"></div>
        <div id="content">
-       
-
-        <h1>{{ question.question_text }}</h1>
-
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-<form action="{% url 'bigweb:vote' question.id %}" method="post">
-
-{% csrf_token %}
-{% for choice in question.choice_set.all %}
-    
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-
-    {% endfor %}
-<input type="submit" value="Vote">
-</form>
-      </div>
-        </div>
-    </body>
+           
+    </div>
+      </body>
     </html>

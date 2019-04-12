@@ -6,28 +6,30 @@
 <style>
     #main{
      display:grid;
-     grid-template-columns: 33vw auto 33vw;
-     grid-template-rows: 20vh 57vh;
+     grid-template-columns: 17vw auto 17vw;
+     grid-template-rows: 15vh 80vh;
      grid-template-areas:"header header header"
                          "leftSB content rightSB";
     }
     body {
-      background-color: lightblue;
+      background-color: rgb(57, 100, 114);
     }
     #header{
      grid-area:header;
-     background-color: rgb(33, 148, 214);
+     background-color: rgb(111, 127, 136);
+     text-align: center;
     }
     #leftSB{
       grid-area:leftSB;
-      background-color: rgb(155, 113, 233);
+      background-color: rgb(61, 105, 228);
     }
     #rightSB{
       grid-area:rightSB;
-      background-color: rgb(226, 120, 94);
+      background-color: rgb(15, 99, 196);
     }
     #content{
     grid-area:content;
+    text-align: center;
     }
     
     #display{
@@ -52,7 +54,7 @@
     </head>
     <body>
      <div id="main">
-       <div id="header">The leatest questions!</div>
+       <div id="header"><strong><h1> Leatest questions!</h1></strong></div>
        <div id="rightSB"></div>
        <div id="leftSB"></div>
        <div id="content">
